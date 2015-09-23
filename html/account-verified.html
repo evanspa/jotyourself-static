@@ -25,7 +25,8 @@
       .header {
       background-color: #0D51A6;
       color: #ffffff;
-      padding: 15px;
+      /*padding: 15px;*/
+      padding: 0px;
       }
       .menu ul {
       list-style-type: none;
@@ -59,6 +60,9 @@
       /* For mobile phones: */
       [class*="col-"] {
       width: 100%;
+      } 
+      @media only screen and (max-width: 768px) {
+      .img-size {width: 212px; height: 76px}
       }
       @media only screen and (min-width: 768px) {
       /* For desktop: */
@@ -74,6 +78,7 @@
       .col-10 {width: 83.33%;}
       .col-11 {width: 91.66%;}
       .col-12 {width: 100%;}
+      .img-size {width: 397px; height: 139px}
       }
     </style>
   </head>
@@ -81,7 +86,7 @@
 
     <div class="header">
       <!--<h1>Gas Jot - Account Verification</h1>-->
-
+      <img class="img-size" src="/images/gas-jot-title/gas-jot-title-50.png" />
     </div>
 
     <div class="row">
