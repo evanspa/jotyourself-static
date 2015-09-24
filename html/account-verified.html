@@ -53,8 +53,15 @@
       }
 
       /* For desktop: */
-      @media only screen and (min-width: 768px) {
+      @media only screen
+      and (min-width: 1024px) {
         .title-img { width: 397px; height: 139px; }
+      }
+
+      /* For tables */
+      @media only screen
+      and (max-width: 1024px) {
+        .baseContent { width: 75%; }
       }
 
       /* Retina-specific stuff here */
@@ -63,7 +70,8 @@
       }
 
       /* For mobile phones: */
-      @media only screen and (max-width: 768px) {
+      @media only screen
+      and (max-width: 768px) {
         .title-img { width: 212px; height: 76px; }
         .baseContent { width: 100%; }
       }
