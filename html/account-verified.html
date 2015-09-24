@@ -24,32 +24,38 @@
       * {
       box-sizing: border-box;
       }
-      body {
 
+      body {
       }
+
       .row:after {
       content: "";
       clear: both;
       display: block;
       }
+
       [class*="col-"] {
       float: left;
       padding: 15px;
       }
+
       html {
       font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
       }
+
       .header {
       background-color: #0D51A6;
       color: #ffffff;
       /*padding: 15px;*/
       padding: 0px;
       }
+
       .menu ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       }
+
       .menu li {
       padding: 8px;
       margin-bottom: 7px;
@@ -57,9 +63,11 @@
       color: #ffffff;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       }
+
       .menu li:hover {
       background-color: #0099cc;
       }
+
       .aside {
       background-color: #33b5e5;
       padding: 15px;
@@ -67,6 +75,7 @@
       text-align: center;
       font-size: 14px;
       }
+
       .footer {
       background-color: #0D51A6;
       color: #ffffff;
@@ -74,13 +83,11 @@
       font-size: 12px;
       padding: 5px;
       }
-      /* For mobile phones: */
+
       [class*="col-"] {
       width: 100%;
       }
-      @media only screen and (max-width: 768px) {
-      .img-size {width: 212px; height: 76px}
-      }
+
       @media only screen and (min-width: 768px) {
       /* For desktop: */
       .col-1 {width: 8.33%;}
@@ -95,7 +102,17 @@
       .col-10 {width: 83.33%;}
       .col-11 {width: 91.66%;}
       .col-12 {width: 100%;}
-      .img-size {width: 397px; height: 139px}
+      .title-img {width: 397px; height: 139px}
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        /* Retina-specific stuff here */
+        .title-img {width: 212px; height: 76px}
+      }
+
+      /* For mobile phones: */
+      @media only screen and (max-width: 768px) {
+        .title-img {width: 212px; height: 76px}
       }
     </style>
   </head>
@@ -103,7 +120,7 @@
 
     <div class="header">
       <!--<h1>Gas Jot - Account Verification</h1>-->
-      <img class="img-size" src="/images/gas-jot-title/gas-jot-title-50.png" />
+      <img class="title-img" src="/images/gas-jot-title/gas-jot-title-50.png" />
     </div>
 
     <div class="row">
