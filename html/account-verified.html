@@ -23,63 +23,245 @@
 
       html {
         font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+        font-size: 2em;
+      }
+
+      body {
+        margin: 0;
       }
 
       .baseContent {
         background-color: #0D51A6;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 100%;
       }
 
       .baseContent.header {
         text-align: center;
+        margin-top: 0.5em;
+        padding-top: 1.5em;
+        padding-bottom: .75em;
       }
 
       .baseContent.main {
         background-color: #ffffff;
         text-align: left;
+        font-size: 0.75em;
       }
 
       .baseContent.footer-bar {
-        height: 8px;
+        height: 1em;
       }
 
       .baseContent.footer {
         text-align: center;
-        font-size: 16px;
         background-color: white;
         color: gray;
       }
 
-      /* For desktop: */
+      /* ----------- iPhone 4 and 4S ----------- */
+
+      /* Portrait and Landscape */
       @media only screen
-      and (min-width: 1024px) {
-        .title-img { width: 397px; height: 139px; }
+      and (min-device-width: 320px)
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+        .baseContent { width: 100%; }
       }
 
-      /* For tables */
+      /* ----------- iPhone 5 and 5S ----------- */
+
+      /* Portrait and Landscape */
       @media only screen
-      and (max-width: 1024px) {
+      and (min-device-width: 320px)
+      and (max-device-width: 568px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+        .baseContent { width: 95%; }
+        .baseContent.main { font-size: 1.5em; }
+        .baseContent.footer { font-size: 1.5em; }
+      }
+
+      /* ----------- iPhone 6 ----------- */
+
+      /* Portrait and Landscape */
+      @media only screen
+      and (min-device-width: 375px)
+      and (max-device-width: 667px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+        .baseContent { width: 90%; }
+      }
+
+      /* ----------- iPhone 6+ ----------- */
+
+      /* Portrait and Landscape */
+      @media only screen
+      and (min-device-width: 414px)
+      and (max-device-width: 736px)
+      and (-webkit-min-device-pixel-ratio: 3) {
+        .baseContent { width: 90%; }
+      }
+
+      /* ----------- Galaxy S3 ----------- */
+
+      /* Portrait and Landscape */
+      @media screen
+      and (device-width: 320px)
+      and (device-height: 640px)
+      and (-webkit-device-pixel-ratio: 2) {
+        .baseContent { width: 90%; }
+      }
+
+      /* ----------- Galaxy S4 ----------- */
+
+      /* Portrait and Landscape */
+      @media screen
+      and (device-width: 320px)
+      and (device-height: 640px)
+      and (-webkit-device-pixel-ratio: 3) {
+        .baseContent { width: 90%; }
+      }
+
+      /* ----------- Galaxy S5 ----------- */
+
+      /* Portrait and Landscape */
+      @media screen
+      and (device-width: 360px)
+      and (device-height: 640px)
+      and (-webkit-device-pixel-ratio: 3) {
+        .baseContent { width: 90%; }
+      }
+
+      /* ----------- iPad mini ----------- */
+
+      /* Portrait and Landscape */
+      @media only screen
+      and (min-device-width: 768px)
+      and (max-device-width: 1024px)
+      and (-webkit-min-device-pixel-ratio: 1) {
         .baseContent { width: 75%; }
       }
 
-      /* Retina-specific stuff here */
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .title-img { width: 212px; height: 76px; }
+      /* ----------- iPad 1 and 2 ----------- */
+      /* Portrait and Landscape */
+      @media only screen
+      and (min-device-width: 768px)
+      and (max-device-width: 1024px)
+      and (-webkit-min-device-pixel-ratio: 1) {
+        .baseContent { width: 75%; }
       }
 
-      /* For mobile phones: */
+      /* ----------- iPad 3 and 4 ----------- */
+      /* Portrait and Landscape */
       @media only screen
-      and (max-width: 768px) {
-        .title-img { width: 212px; height: 76px; }
-        .baseContent { width: 100%; }
+      and (min-device-width: 768px)
+      and (max-device-width: 1024px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+        .baseContent { width: 75%; }
       }
+
+      /* ----------- Galaxy Tab 10.1 ----------- */
+
+      /* Portrait and Landscape */
+      @media
+      (min-device-width: 800px)
+      and (max-device-width: 1280px) {
+        .baseContent { width: 75%; }
+      }
+
+      /* ----------- Asus Nexus 7 ----------- */
+
+      /* Portrait and Landscape */
+      @media screen
+      and (device-width: 601px)
+      and (device-height: 906px)
+      and (-webkit-min-device-pixel-ratio: 1.331)
+      and (-webkit-max-device-pixel-ratio: 1.332) {
+        .baseContent { width: 75%; }
+      }
+
+
+      /* ----------- Kindle Fire HD 7" ----------- */
+
+      /* Portrait and Landscape */
+      @media only screen
+      and (min-device-width: 800px)
+      and (max-device-width: 1280px)
+      and (-webkit-min-device-pixel-ratio: 1.5) {
+        .baseContent { width: 75%; }
+      }
+
+      /* ----------- Kindle Fire HD 8.9" ----------- */
+
+      /* Portrait and Landscape */
+      @media only screen
+      and (min-device-width: 1200px)
+      and (max-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 1.5) {
+        .baseContent { width: 75%; }
+      }
+
+
+      /* ----------- Laptops/Desktops ----------- */
+
+      /* ----------- Non-Retina Screens ----------- */
+      @media screen
+      and (min-device-width: 1200px)
+      and (-webkit-min-device-pixel-ratio: 1) {
+        .baseContent { width: 60%; }
+      }
+
+      /* ----------- Retina Screens ----------- */
+      @media screen
+      and (min-device-width: 1200px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (min-resolution: 192dpi) {
+        .baseContent { width: 60%; }
+      }
+
+
+      /* For desktop: */
+      /*@media only screen
+      and (min-width: 1024px) {
+        .baseContent { width: 50%; }
+        .baseContent.main { margin-left: auto; }
+        .title-img { width: 40%; height: 40%; }
+        html { font-size: 1.0em; }
+      }*/
+
+      /* For tables */
+      /*@media only screen
+      and (min-width: 1000px) {
+        .baseContent { width: 75%; }
+        .baseContent.main { margin-left: auto; }
+        /*.title-img { width: 20%; height: 20%; }*/
+        html { font-size: 1.5em; }
+      }*/
+
+      /* For mobile phones: */
+      /*@media only screen
+      and (max-width: 768px) {*/
+        /*.title-img { width: 212px; height: 76px; }
+        .baseContent { width: 100%; }*/
+      /*}*/
+
+      /* Retina-specific stuff here */
+      /*@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {*/
+        /*.title-img { width: 212px; height: 76px; }*/
+      /*}*/
+
     </style>
   </head>
   <body>
     <div class="baseContent header">
-      <img class="title-img" src="/images/gas-jot-title/gas-jot-title-50.png" />
+      <!--<img srcset="/images/gas-jot-title/gas-jot-title-100.png 758w,
+                   /images/gas-jot-title/gas-jot-title-75.png 584w,
+                   /images/gas-jot-title/gas-jot-title-50.png 397w,
+                   /images/gas-jot-title/gas-jot-title-25.png 212w"
+                   src="/images/gas-jot-title/gas-jot-title-75.png" />-->
+      <img srcset="/images/gas-jot-title/gas-jot-title-150.png 2x,
+                   /images/gas-jot-title/gas-jot-title-200.png 3x"
+         src="/images/gas-jot-title/gas-jot-title-50.png" />
     </div>
     <div class="baseContent main">
       <h1>Thank you.</h1>
