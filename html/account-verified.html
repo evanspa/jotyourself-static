@@ -20,125 +20,66 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#0d51a6">
     <style>
-      * {
-      box-sizing: border-box;
-      }
-
-      body {
-      }
-
-      .row:after {
-      content: "";
-      clear: both;
-      display: block;
-      }
-
-      [class*="col-"] {
-      float: left;
-      padding: 15px;
-      }
 
       html {
-      font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+        font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
       }
 
-      .header {
-      width: 50%;
-      text-align: center;
-      background-color: #0D51A6;
-      color: #ffffff;
-      /*padding: 15px;*/
-      padding: 0px;
-      margin-left: auto;
-      margin-right: auto;
+      .baseContent {
+        background-color: #0D51A6;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
       }
 
-      .menu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      .baseContent.header {
+        text-align: center;
       }
 
-      .menu li {
-      padding: 8px;
-      margin-bottom: 7px;
-      background-color :#33b5e5;
-      color: #ffffff;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      .baseContent.main {
+        background-color: #ffffff;
+        text-align: left;
       }
 
-      .menu li:hover {
-      background-color: #0099cc;
+      .baseContent.footer-bar {
+        height: 8px;
       }
 
-      .aside {
-      background-color: #33b5e5;
-      padding: 15px;
-      color: #ffffff;
-      text-align: center;
-      font-size: 14px;
+      .baseContent.footer {
+        text-align: center;
+        font-size: 16px;
+        background-color: white;
+        color: gray;
       }
 
-      .footer {
-      background-color: #0D51A6;
-      color: #ffffff;
-      text-align: center;
-      font-size: 12px;
-      padding: 5px;
-      }
-
-      [class*="col-"] {
-      width: 100%;
-      }
-
-      @media only screen and (min-width: 768px) {
       /* For desktop: */
-      .col-1 {width: 8.33%;}
-      .col-2 {width: 16.66%;}
-      .col-3 {width: 25%;}
-      .col-4 {width: 33.33%;}
-      .col-5 {width: 41.66%;}
-      .col-6 {width: 50%;}
-      .col-7 {width: 58.33%;}
-      .col-8 {width: 66.66%;}
-      .col-9 {width: 75%;}
-      .col-10 {width: 83.33%;}
-      .col-11 {width: 91.66%;}
-      .col-12 {width: 100%;}
-      .title-img {width: 397px; height: 139px}
+      @media only screen and (min-width: 768px) {
+        .title-img { width: 397px; height: 139px; }
       }
 
+      /* Retina-specific stuff here */
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        /* Retina-specific stuff here */
-        .title-img {width: 212px; height: 76px}
+        .title-img { width: 212px; height: 76px; }
       }
 
       /* For mobile phones: */
       @media only screen and (max-width: 768px) {
-        .title-img {width: 212px; height: 76px}
+        .title-img { width: 212px; height: 76px; }
+        .baseContent { width: 100%; }
       }
     </style>
   </head>
   <body>
-
-    <div class="header">
-      <!--<h1>Gas Jot - Account Verification</h1>-->
+    <div class="baseContent header">
       <img class="title-img" src="/images/gas-jot-title/gas-jot-title-50.png" />
     </div>
-
-    <div class="row">
-      <div class="col-6">
-        <h1>Thank you.</h1>
-        <p>Your Gas Jot account with e-mail address: <span style="font-weight: bold">{{ user/email }}</span> has been verified successfully.</p>
-      </div>
+    <div class="baseContent main">
+      <h1>Thank you.</h1>
+      <p>Your Gas Jot account with e-mail address: <span style="font-weight: bold">{{ user/email }}</span> has been verified successfully.</p>
     </div>
-
-    <div class="footer">
-	<p></p>
-      <!--<p>Gas Jot is a JotYourself.com Application</p>-->
+    <div class="baseContent footer-bar"></div>
+    <div class="baseContent footer">
+      <p>Gas Jot is a JotYourself.com application.</p>
     </div>
-
-    <p style="text-align: center; color: gray">Gas Jot is a JotYourself.com application.</p>
-
   </body>
 </html>
