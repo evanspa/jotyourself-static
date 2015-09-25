@@ -120,6 +120,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* ----------- iPad 1 and 2 ----------- */
+
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 768px)
@@ -129,6 +130,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* ----------- iPad 3 and 4 ----------- */
+
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 768px)
@@ -178,20 +180,16 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
     .baseContent { width: 75%; }
 }
 
-
 /* ----------- Laptops/Desktops ----------- */
 
-/* ----------- Non-Retina Screens ----------- */
-@media screen
-and (min-device-width: 1200px)
-and (-webkit-min-device-pixel-ratio: 1) {
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+    html { font-size: 1.25em; }
     .baseContent { width: 60%; }
 }
 
-/* ----------- Retina Screens ----------- */
-@media screen
-and (min-device-width: 1200px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (min-resolution: 192dpi) {
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+    html { font-size: 1.25em; }
     .baseContent { width: 60%; }
 }
